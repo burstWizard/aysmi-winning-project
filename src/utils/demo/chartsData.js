@@ -4,8 +4,8 @@ export const doughnutLegends = [
 ]
 
 export const lineLegends = [
-  { title: 'Organic', color: 'bg-teal-600' },
-  { title: 'Paid', color: 'bg-purple-600' },
+  { title: 'On-task', color: 'bg-teal-600' },
+  { title: 'Distraction', color: 'bg-purple-600' },
 ]
 
 export const barLegends = [

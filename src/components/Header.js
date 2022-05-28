@@ -37,7 +37,7 @@ function Header() {
           {/* <!-- Theme toggler --> */}
           
           {/* <!-- Notifications menu --> */}
-          <img src = "/Logowhite.png" width = "100px"/>
+          <img src = "/NewLogo.png" width = "100px"/>
         </ul>
       </div>
     </header>

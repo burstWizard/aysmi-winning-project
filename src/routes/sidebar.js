@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/app/cards',
     icon: 'CardsIcon',
-    name: 'Community',
+    name: 'Challenges',
   },
   
 ]

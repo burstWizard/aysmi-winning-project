@@ -11,9 +11,9 @@ import RoundIcon from '../components/RoundIcon'
 function Cards() {
   return (
     <>
-      <PageTitle>Cards</PageTitle>
+      <PageTitle>Challenges</PageTitle>
 
-      <SectionTitle>Big section cards</SectionTitle>
+      <SectionTitle>Your Challenges</SectionTitle>
 
       <Card className="mb-8 shadow-md">
         <CardBody>

@@ -65,7 +65,7 @@ function Dashboard() {
           />
         </InfoCard>
 
-        <InfoCard title="Total Time Online" value="$ 46,760.89">
+        <InfoCard title="Total Time Online" value="15 hours">
           <RoundIcon
             icon={MoneyIcon}
             iconColorClass="text-green-500 dark:text-green-100"
@@ -74,7 +74,7 @@ function Dashboard() {
           />
         </InfoCard>
 
-        <InfoCard title="% Distraction" value="376">
+        <InfoCard title="% Distraction" value="48%">
           <RoundIcon
             icon={CartIcon}
             iconColorClass="text-blue-500 dark:text-blue-100"
@@ -100,7 +100,6 @@ function Dashboard() {
               <TableCell>Task</TableCell>
               <TableCell>Total Time</TableCell>
               <TableCell>Category</TableCell>
-              <TableCell>Date</TableCell>
             </tr>
           </TableHeader>
           <TableBody>
@@ -108,21 +107,17 @@ function Dashboard() {
               <TableRow key={i}>
                 <TableCell>
                   <div className="flex items-center text-sm">
-                    <Avatar className="hidden mr-3 md:block" src={user.avatar} alt="User image" />
+                    
                     <div>
                       <p className="font-semibold">{user.name}</p>
-                      <p className="text-xs text-gray-600 dark:text-gray-400">{user.job}</p>
                     </div>
                   </div>
                 </TableCell>
                 <TableCell>
-                  <span className="text-sm">$ {user.amount}</span>
+                  <span className="text-sm"> {user.amount} hrs</span>
                 </TableCell>
                 <TableCell>
-                  <Badge type={user.status}>{user.status}</Badge>
-                </TableCell>
-                <TableCell>
-                  <span className="text-sm">{new Date(user.date).toLocaleDateString()}</span>
+                  <Badge type={user.status === "distraction" ? "danger" : "success"}>{user.status}</Badge>
                 </TableCell>
               </TableRow>
             ))}
@@ -138,14 +133,14 @@ function Dashboard() {
         </TableFooter>
       </TableContainer>
 
-      <PageTitle>Charts</PageTitle>
+      <PageTitle>Visualizations</PageTitle>
       <div className="grid gap-6 mb-8 md:grid-cols-2">
         <ChartCard title="Revenue">
           <Doughnut {...doughnutOptions} />
           <ChartLegend legends={doughnutLegends} />
         </ChartCard>
 
-        <ChartCard title="Traffic">
+        <ChartCard title="Usage">
           <Line {...lineOptions} />
           <ChartLegend legends={lineLegends} />
         </ChartCard>
